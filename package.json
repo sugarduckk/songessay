@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:client": "cd packages/web-client && yarn start",
+    "start:admin": "cd packages/web-admin && yarn start",
+    "start": "concurrently --names client,admin \"yarn start:client\" \"yarn start:admin\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Prompt';
+  src: local('Prompt'), local('Prompt-Regular'), url('./res/fonts/Prompt-Regular.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: Prompt;
+}

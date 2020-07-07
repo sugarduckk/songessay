@@ -1,0 +1,13 @@
+{
+  "name": "firebase-wrapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "source": true,
+  "dependencies": {
+    "firebase": "^7.14.6"
+  }
+}
