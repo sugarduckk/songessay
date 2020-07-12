@@ -19,12 +19,12 @@ const useDefaultPackageValues = (essayValues) => {
       case 'text': {
         let wordCount = getWordCount(essayText);
         let defaultWordCount;
-        WordCount.forEach(count => {
-          if (count <= wordCount) {
+        WordCount.slice().reverse().forEach(count => {
+          if (count >= wordCount) {
             defaultWordCount = count;
           }
         });
-        defaultPackageValues.wordCount = defaultWordCount;
+        defaultPackageValues.wordCount = defaultWordCount.toString();
         return defaultPackageValues;
       }
       default: {

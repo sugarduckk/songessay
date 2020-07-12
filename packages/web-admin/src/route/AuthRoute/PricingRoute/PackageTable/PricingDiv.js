@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setDialogScreen } from '../../../../redux/actions';
 import { CustomDialog } from 'shared-lib/dialog';
 import PricingForm from './PricingForm';
+import StyledPackageTable from 'shared-lib/component/StyledPackageTable';
 
 const PricingDiv = ({ price, packageName, wordCount, format }) => {
   const dispatch = useDispatch();
@@ -13,9 +14,9 @@ const PricingDiv = ({ price, packageName, wordCount, format }) => {
       </CustomDialog>;
     }));
   }, [dispatch, packageName, wordCount, format, price]);
-  return <td onClick={onClick}>
+  return <StyledPackageTable.Td onClick={onClick}>
     <span>{price}</span>
-  </td>;
+  </StyledPackageTable.Td>;
 };
 
 export default PricingDiv;
